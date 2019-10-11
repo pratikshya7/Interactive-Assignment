@@ -1,0 +1,48 @@
+﻿<div class="card mt-5">
+    <div class="card-body">
+        <h5 class="card-title">Please select what top repository you want to view</h5>
+        <hr />
+        <div class="container">
+            @Html.ActionLink(
+                linkText: "Yearly",
+                actionName: "TopRepositories",
+                controllerName: "Home",
+                routeValues: new
+                {
+                    type = 'Y'
+                },
+                htmlAttributes: new { @class = "btn btn-outline-primary" }
+            )
+            @Html.ActionLink(
+                linkText: "Monthly",
+                actionName: "TopRepositories",
+                controllerName: "Home",
+                routeValues: new
+                {
+                    type = 'M'
+                },
+                htmlAttributes: new { @class = "btn btn-outline-secondary" }
+            )
+            @Html.ActionLink(
+                linkText: "Weekly",
+                actionName: "TopRepositories",
+                controllerName: "Home",
+                routeValues: new
+                {
+                    type = 'W'
+                },
+                htmlAttributes: new { @class = "btn btn-outline-success" }
+            )
+            @Html.ActionLink(
+                linkText: "Daily",
+                actionName: "TopRepositories",
+                controllerName: "Home",
+                routeValues: new
+                {
+                    type = 'D'
+                },
+                htmlAttributes: new { @class = "btn btn-outline-danger" }
+            )
+        </div>
+    </div>
+</div>
